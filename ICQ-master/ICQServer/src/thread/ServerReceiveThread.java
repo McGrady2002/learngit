@@ -43,20 +43,20 @@ public class ServerReceiveThread extends Thread {
 				
 				if(type.equalsIgnoreCase("聊天信息")){
 					String toSomebody = (String)client.getInput().readObject();
-					String status  = (String)client.getInput().readObject();
-					String action  = (String)client.getInput().readObject();
+//					String status  = (String)client.getInput().readObject();
+//					String action  = (String)client.getInput().readObject();
 					String message = (String)client.getInput().readObject();
 					
 					String msg = client.getUserName()
-							+" "+ action
+							+" "
 							+ "对 "
 							+ toSomebody 
 							+ " 说 : "
 							+ message
 							+ "\n";
-					if(status.equalsIgnoreCase("悄悄话")){
-						msg = " [悄悄话] " + msg;
-					}
+//					if(status.equalsIgnoreCase("悄悄话")){
+//						msg = " [悄悄话] " + msg;
+//					}
 					textarea.append(msg);
 					
 					if(toSomebody.equalsIgnoreCase("所有人")){

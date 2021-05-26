@@ -23,7 +23,7 @@ public class ClientListener implements ActionListener {
 
 	String ip = "127.0.0.1";//连接到服务端的ip地址
 	int port = 8888;//连接到服务端的端口号
-	public String userName = "李强";//用户名
+	public String userName = "未登录";//用户名
 	public int type = 0;//0表示未连接，1表示已连接
 	
 	Socket socket;
@@ -174,11 +174,11 @@ public class ClientListener implements ActionListener {
 	public void SendMessage(){
 		String toSomebody = mainFrame.combobox.getSelectedItem().toString();
 		String status  = "";
-		if(mainFrame.checkbox.isSelected()){
-			status = "悄悄话";
-		}	
+//		if(mainFrame.checkbox.isSelected()){
+//			status = "悄悄话";
+//		}	
 		
-		String action = mainFrame.actionlist.getSelectedItem().toString();
+//		String action = mainFrame.actionlist.getSelectedItem().toString();
 		String message = mainFrame.clientMessage.getText();
 		
 		if(socket.isClosed()){
@@ -190,10 +190,10 @@ public class ClientListener implements ActionListener {
 			output.flush();
 			output.writeObject(toSomebody);
 			output.flush();
-			output.writeObject(status);
-			output.flush();
-			output.writeObject(action);
-			output.flush();
+//			output.writeObject(status);
+//			output.flush();
+//			output.writeObject(action);
+//			output.flush();
 			output.writeObject(message);
 			output.flush();
 		}

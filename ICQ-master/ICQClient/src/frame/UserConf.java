@@ -15,7 +15,7 @@ public class UserConf extends JDialog {
 	JButton save = new JButton();
 	JButton cancel = new JButton();
 	JLabel DLGINFO=new JLabel(
-		"                         默认用户名为：李强");
+		"                        当前未登录");
 
 	JPanel panelSave = new JPanel();
 	JLabel message = new JLabel();
@@ -47,10 +47,15 @@ public class UserConf extends JDialog {
 		this.setTitle("用户设置");
 		message.setText("请输入用户名:");
 		userName = new JTextField(10);
-		userName.setText(userInputName);
+//		userName.setText(userInputName);
 		save.setText("保存");
 		cancel.setText("取消");
 
+		if(!userInputName.equals("未登录")) {
+			DLGINFO.setText("                        当前用户名为:"+userInputName);
+		}
+			
+		
 		panelUserConf.setLayout(new FlowLayout());
 		panelUserConf.add(message);
 		panelUserConf.add(userName);
@@ -73,7 +78,7 @@ public class UserConf extends JDialog {
 					if(userName.getText().equals("")){
 						DLGINFO.setText(
 							"                                 用户名不能为空！");
-						userName.setText(userInputName);
+//						userName.setText(userInputName);
 						return;
 					}
 					else if(userName.getText().length() > 15){
@@ -92,7 +97,7 @@ public class UserConf extends JDialog {
 		this.addWindowListener(
 			new WindowAdapter(){
 				public void windowClosing(WindowEvent e){
-					DLGINFO.setText("                         默认用户名为：李强");
+//					DLGINFO.setText("                         默认用户名为：李强");
 				}
 			}
 		);
@@ -101,7 +106,7 @@ public class UserConf extends JDialog {
 		cancel.addActionListener(
 			new ActionListener(){
 				public void actionPerformed(ActionEvent e){
-					DLGINFO.setText("                         默认用户名为：李强");
+//					DLGINFO.setText("                         默认用户名为：李强");
 					dispose();
 				}
 			}

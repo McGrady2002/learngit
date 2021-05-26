@@ -46,8 +46,8 @@ public class MainFrame extends JFrame {
 	JLabel express,sendToLabel,messageLabel ;
 
 	public JTextField clientMessage;//客户端消息的发送
-	public JCheckBox checkbox;//悄悄话
-	public JComboBox actionlist;//表情选择
+//	public JCheckBox checkbox;//悄悄话
+//	public JComboBox actionlist;//表情选择
 	public JButton clientMessageButton;//发送消息
 	public JTextField showStatus;//显示用户连接状态
 	
@@ -142,17 +142,17 @@ public class MainFrame extends JFrame {
 		toolBar.add(exitButton);
 		contentPane.add(toolBar,BorderLayout.NORTH);
 
-		checkbox = new JCheckBox("悄悄话");
-		checkbox.setSelected(false);
+//		checkbox = new JCheckBox("悄悄话");
+//		checkbox.setSelected(false);
 
-		actionlist = new JComboBox();
-		actionlist.addItem("微笑地");
-		actionlist.addItem("高兴地");
-		actionlist.addItem("轻轻地");
-		actionlist.addItem("生气地");
-		actionlist.addItem("小心地");
-		actionlist.addItem("静静地");
-		actionlist.setSelectedIndex(0);
+//		actionlist = new JComboBox();
+//		actionlist.addItem("微笑地");
+//		actionlist.addItem("高兴地");
+//		actionlist.addItem("轻轻地");
+//		actionlist.addItem("生气地");
+//		actionlist.addItem("小心地");
+//		actionlist.addItem("静静地");
+//		actionlist.setSelectedIndex(0);
 
 		//初始时
 		loginButton.setEnabled(true);
@@ -177,7 +177,7 @@ public class MainFrame extends JFrame {
 		clientMessageButton.setText("发送");
 
 		sendToLabel = new JLabel("发送至:");
-		express = new JLabel("         表情:   ");
+//		express = new JLabel("         表情:   ");
 		messageLabel = new JLabel("发送消息:");
 		downPanel = new JPanel();
 		girdBag = new GridBagLayout();
@@ -210,31 +210,31 @@ public class MainFrame extends JFrame {
 		girdBag.setConstraints(combobox,girdBagCon);
 		downPanel.add(combobox);
 
-		girdBagCon = new GridBagConstraints();
-		girdBagCon.gridx =2;
-		girdBagCon.gridy = 2;
-		girdBagCon.anchor = GridBagConstraints.LINE_END;
-		girdBag.setConstraints(express,girdBagCon);
-		downPanel.add(express);
+//		girdxBagCon = new GridBagConstraints();
+//		girdBagCon.gridx =2;
+//		girdBagCon.gridy = 2;
+//		girdBagCon.anchor = GridBagConstraints.LINE_END;
+//		girdBag.setConstraints(express,girdBagCon);
+//		downPanel.add(express);
 
-		girdBagCon = new GridBagConstraints();
-		girdBagCon.gridx = 3;
-		girdBagCon.gridy = 2;
-		girdBagCon.anchor = GridBagConstraints.LINE_START;
-		//girdBagCon.insets = new Insets(1,0,0,0);
-		//girdBagCon.ipadx = 5;
-		//girdBagCon.ipady = 5;
-		girdBag.setConstraints(actionlist,girdBagCon);
-		downPanel.add(actionlist);
+//		girdBagCon = new GridBagConstraints();
+//		girdBagCon.gridx = 3;
+//		girdBagCon.gridy = 2;
+//		girdBagCon.anchor = GridBagConstraints.LINE_START;
+//		//girdBagCon.insets = new Insets(1,0,0,0);
+//		//girdBagCon.ipadx = 5;
+//		//girdBagCon.ipady = 5;
+//		girdBag.setConstraints(actionlist,girdBagCon);
+//		downPanel.add(actionlist);
 
-		girdBagCon = new GridBagConstraints();
-		girdBagCon.gridx = 4;
-		girdBagCon.gridy = 2;
-		girdBagCon.insets = new Insets(1,0,0,0);
-		//girdBagCon.ipadx = 5;
-		//girdBagCon.ipady = 5;
-		girdBag.setConstraints(checkbox,girdBagCon);
-		downPanel.add(checkbox);
+//		girdBagCon = new GridBagConstraints();
+//		girdBagCon.gridx = 4;
+//		girdBagCon.gridy = 2;
+//		girdBagCon.insets = new Insets(1,0,0,0);
+//		//girdBagCon.ipadx = 5;
+//		//girdBagCon.ipady = 5;
+//		girdBag.setConstraints(checkbox,girdBagCon);
+//		downPanel.add(checkbox);
 
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
